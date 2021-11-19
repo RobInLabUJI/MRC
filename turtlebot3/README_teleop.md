@@ -20,7 +20,7 @@ docker network create -d overlay --attachable rosnet
 
 4. In TurtleBot3
 ```
-./turtlebot3/run.sh
+./turtlebot3/bringup/run.sh
 ```
 
 5. In external PC
