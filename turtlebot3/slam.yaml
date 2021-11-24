@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tb3_teleop
+  name: tb3_slam
 spec:
   selector:
     matchLabels:
-      app: tb3_teleop
+      app: tb3_slam
   template:
     metadata:
       labels:
-        app: tb3_teleop
+        app: tb3_slam
     spec:
       containers:
-      - name: tb3_teleop
-        image: robinlab/cmr_tb3_teleop
+      - name: tb3_slam
+        image: robinlab/cmr_tb3_slam
         env:
         - name: ROS_MASTER_URI
           value: http://192.168.0.112:11311
