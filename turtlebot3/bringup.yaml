@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tb3_bringup
+spec:
+  selector:
+    matchLabels:
+      app: tb3_bringup
+  template:
+    metadata:
+      labels:
+        app: tb3_bringup
+    spec:
+      containers:
+      - name: tb3_bringup
+        image: robinlab/cmr_tb3_bringup
+        securityContext:
+          privileged: true
+        env:
+        - name: ROS_MASTER_URI
+          value: http://192.168.0.112:11311
+        - name: ROS_IP
+          value: 192.168.0.112
+      hostNetwork: true
