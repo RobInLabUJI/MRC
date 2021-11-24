@@ -1,4 +1,4 @@
-## TurtleBot3 teleoperation in networked containers across multiple hosts
+## TurtleBot3 SLAM in networked containers across multiple hosts
 
 Based on [the Docker docs](https://docs.docker.com/network/network-tutorial-overlay/#use-an-overlay-network-for-standalone-containers).
 
@@ -26,5 +26,10 @@ docker network create -d overlay --attachable rosnet
 5. In external PC
 ```
 ./turtlebot3/teleop/run.sh
+```
+
+6. In external PC
+```
+./turtlebot3/slam/run.sh
 ```
 
