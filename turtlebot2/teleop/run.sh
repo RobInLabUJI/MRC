@@ -1,4 +1,4 @@
-docker run --rm -it --net=rosnet --name teleop \
-  --env ROS_HOSTNAME=teleop \
-  --env ROS_MASTER_URI=http://turtlebot2:11311 \
+docker run --rm -it --network host --name teleop \
+  --env ROS_IP=192.168.0.201 \
+  --env ROS_MASTER_URI=http://192.168.0.207:11311 \
   robinlab/cmr_tb2_teleop
