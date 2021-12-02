@@ -1,1 +1,1 @@
-docker run --rm -it --privileged robinlab/cmr_realsense_bringup
+docker run --rm -it --privileged --network host robinlab/cmr_realsense_bringup
