@@ -6,3 +6,5 @@ RUN apt-get update && apt-get install -y \
 
 CMD ["roslaunch", "realsense2_camera", "rs_camera.launch", "align_depth:=true"]
 
+ADD realsense.launch /
+
